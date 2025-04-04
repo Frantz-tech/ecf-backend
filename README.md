@@ -64,7 +64,7 @@ If you want to contribute on this project, here's how to proceed :
 
 npm run commit => for conventionals commits
 npm run prepare => husky install
-npm run dev => start server and reset every time we save changes
+npm run dev:api => start server and reset every time we save changes
 npm run start: => start server
 npm run prettier: => Format all folder affected by prettier
 

@@ -7,7 +7,7 @@
   "scripts": {
     "test": "vitest",
     "prepare": "husky install",
-    "dev": "node --watch app.js",
+    "dev:api": "node --watch app.js",
     "start": "node app.js",
     "prettier": "prettier . --write",
     "commit": "git-cz",
