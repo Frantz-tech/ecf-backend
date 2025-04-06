@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
   <diagram name="Page-1" id="1GpkBTh5_pye62hC3iqm">
-    <mxGraphModel dx="4048" dy="1382" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="5680" dy="2303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -103,7 +103,7 @@
         <mxCell id="yBcn3SSqvkXzh0EEVifa-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yBcn3SSqvkXzh0EEVifa-20" target="yBcn3SSqvkXzh0EEVifa-50">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="yBcn3SSqvkXzh0EEVifa-80" value="Un lieu 1,N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yBcn3SSqvkXzh0EEVifa-51">
+        <mxCell id="yBcn3SSqvkXzh0EEVifa-80" value="Un lieu peut&amp;nbsp;&lt;div&gt;avoir plusieurs circuit&lt;/div&gt;&lt;div&gt;( 1, N )&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];textShadow=1;" vertex="1" connectable="0" parent="yBcn3SSqvkXzh0EEVifa-51">
           <mxGeometry x="-0.0232" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -156,7 +156,7 @@
         <mxCell id="yBcn3SSqvkXzh0EEVifa-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="yBcn3SSqvkXzh0EEVifa-26" target="yBcn3SSqvkXzh0EEVifa-50">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="yBcn3SSqvkXzh0EEVifa-81" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yBcn3SSqvkXzh0EEVifa-53">
+        <mxCell id="yBcn3SSqvkXzh0EEVifa-81" value="Un circuit à qu&#39;un&amp;nbsp;&lt;div&gt;seul lieu ( 1, 1 )&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];textShadow=1;" vertex="1" connectable="0" parent="yBcn3SSqvkXzh0EEVifa-53">
           <mxGeometry x="-0.0515" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -212,7 +212,7 @@
         <mxCell id="yBcn3SSqvkXzh0EEVifa-40" value="( 1, N )" style="whiteSpace=wrap;html=1;fontSize=14;fillColor=#bac8d3;strokeColor=#23445d;fontStyle=0;startSize=50;rounded=1;strokeWidth=2;shadow=0;dashed=0;arcSize=0;gradientColor=none;gradientDirection=west;" vertex="1" parent="1">
           <mxGeometry x="570" y="1690" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="yBcn3SSqvkXzh0EEVifa-50" value="" style="whiteSpace=wrap;html=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=0;startSize=50;rounded=1;strokeWidth=2;shadow=0;dashed=0;arcSize=4;gradientColor=none;gradientDirection=east;" vertex="1" parent="1">
+        <mxCell id="yBcn3SSqvkXzh0EEVifa-50" value="( N, 1 )" style="whiteSpace=wrap;html=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=0;startSize=50;rounded=1;strokeWidth=2;shadow=0;dashed=0;arcSize=4;gradientColor=none;gradientDirection=east;" vertex="1" parent="1">
           <mxGeometry x="980" y="1140" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="yBcn3SSqvkXzh0EEVifa-56" value="( 1, N )" style="whiteSpace=wrap;html=1;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=0;startSize=50;rounded=1;strokeWidth=2;shadow=0;dashed=0;arcSize=4;gradientColor=none;gradientDirection=east;" vertex="1" parent="1">
