@@ -78,3 +78,5 @@ npx husky install
 npm install --save-dev @commitlint/{config-conventional,cli}
 npm install --save-dev lint-staged
 npm install --save-dev cz-customizable
+npm install mongoose
+npm install dotenv

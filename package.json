@@ -7,8 +7,8 @@
   "scripts": {
     "test": "vitest",
     "prepare": "husky install",
-    "dev:api": "node --watch app.js",
-    "start": "node app.js",
+    "dev:api": "node --watch backend/app.js",
+    "start": "node backend/app.js",
     "prettier": "prettier . --write",
     "commit": "git-cz",
     "lint-staged": "lint-staged"
@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/Frantz-tech/ecf-backend#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
