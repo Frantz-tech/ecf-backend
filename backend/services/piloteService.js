@@ -1,4 +1,4 @@
-import { piloteRepository } from '../repository/piloteRepository.js';
+import { Repository } from '../repository/piloteRepository.js';
 
 const createPilote = async (piloteData) => {
   try {
@@ -17,7 +17,7 @@ const createPilote = async (piloteData) => {
       return { errors };
     }
 
-    const newPilote = await piloteRepository.createPilote(piloteData);
+    const newPilote = await Repository.createPilote(piloteData);
 
     return newPilote;
   } catch (error) {
@@ -27,7 +27,7 @@ const createPilote = async (piloteData) => {
 
 const getAllPilotes = async () => {
   try {
-    const pilotes = await piloteRepository.getAllPilotes();
+    const pilotes = await Repository.getAllPilotes();
 
     return pilotes;
   } catch (error) {
@@ -46,7 +46,7 @@ const getPiloteById = async (id) => {
       return { errors };
     }
 
-    const pilote = await piloteRepository.getPiloteById(id);
+    const pilote = await Repository.getPiloteById(id);
 
     return pilote;
   } catch (error) {
@@ -65,12 +65,12 @@ const updatedPilote = async (id, piloteData) => {
     if (errors.length > 0) {
       return { errors };
     }
-    const updated = await piloteRepository.updatePilote(id, piloteData);
+    const updated = await Repository.updatePilote(id, piloteData);
     if (!updated) {
       throw new Error(`Pilote avec l'ID ${id} non trouvé pour la mise à jour`);
     }
 
-    return { updated };
+    return updated;
   } catch (error) {
     throw new Error(`Erreur lors de la mise à jour du pilote ${error.message}`);
   }
@@ -86,7 +86,7 @@ const deletePilote = async (id) => {
       return { errors };
     }
 
-    const result = await piloteRepository.deletePilote(id);
+    const result = await Repository.deletePilote(id);
     if (!result) {
       throw new Error(`Pilote avec l'id: ${id} non trouvé pour la suppression`);
     }
@@ -97,7 +97,7 @@ const deletePilote = async (id) => {
   }
 };
 
-export const piloteService = {
+export const Service = {
   createPilote,
   getAllPilotes,
   getPiloteById,

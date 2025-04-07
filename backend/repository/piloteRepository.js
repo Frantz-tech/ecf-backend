@@ -1,4 +1,4 @@
-import Pilote from '../models/piloteSchema';
+import Pilote from '../models/piloteSchema.js';
 
 const createPilote = async (piloteData) => {
   try {
@@ -60,7 +60,7 @@ const deletePilote = async (id) => {
   }
 };
 
-export const piloteRepository = {
+export const Repository = {
   createPilote,
   getAllPilotes,
   getPiloteById,
