@@ -1,3 +1,4 @@
+import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import connectDb from './config/db.js';
@@ -8,7 +9,7 @@ const app = express();
 
 // Connecter à la base de données :
 connectDb();
-
+app.use(cors());
 // Vérifier le corp de la requete
 app.use(express.json());
 
@@ -21,4 +22,4 @@ app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
 
-export default app
+export default app;
