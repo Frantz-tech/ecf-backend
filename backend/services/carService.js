@@ -17,7 +17,7 @@ const createCar = async (carData) => {
       return { errors };
     }
 
-    const newCar = await Repository.createCar(piloteData);
+    const newCar = await Repository.createCar(carData);
 
     return newCar;
   } catch (error) {
