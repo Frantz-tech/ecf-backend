@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/form.css" />
+  <link rel="stylesheet" href="../css/containerList.css" />
+  <link rel="shortcut icon" href="/frontend/public/assets/favicon.jpg" type="image/x-icon" sizes="16x16" />
+  <title>ECF RallyScope Pilotes</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="navlist">
+        <li id="home">
+          <a href="../pages/index.html">// Home</a>
+        </li>
+        <li id="pilotes">
+          <a href="../pages/pilotes.html">// Pilotes</a>
+        </li>
+        <li id="vehicules">
+          <a href="../pages/car.html">// Vehicules</a>
+        </li>
+        <li id="competitions">
+          <a href="../pages/compet.html">// Compétitions</a>
+        </li>
+        <li id="circuits">
+          <a href="../pages/circuit.html">// Circuits</a>
+        </li>
+        <li id="sponsors">
+          <a href="../pages/sponsor.html">// Sponsors</a>
+        </li>
+        <!-- <li id="home">
+            <a href="#home">// Home</a>
+          </li> -->
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <div class="container" id="containerList">
+      <div id="piloteList"></div>
+    </div>
+    <div class="container containerForm" id="containerF">
+      <form id="addPiloteForm">
+        <input type="text" id="nom" placeholder="Nom du Pilote" />
+        <input type="text" id="prenom" placeholder="Prénom du Pilote" />
+        <input type="number" id="age" placeholder="Age du Pilote" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footerP" id="footerP">
+      <p>
+        ©2025 ECF RallyScope Project, LLC. All Rights Reserved. RallyScope assets are used legally under license.
+      </p>
+    </div>
+  </footer>
+  <script src="../js/pilote.js"></script>
+</body>
+
+</html>

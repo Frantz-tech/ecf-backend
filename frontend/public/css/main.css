@@ -1,0 +1,97 @@
+/* Main */
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #7e6854b2;
+}
+/* Body */
+body {
+  background-color: black;
+}
+header {
+  background-image: url('/frontend/public/assets/headerBg.png');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+footer {
+  background-color: #000000e3;
+  padding: 10px;
+  font-size: clamp(0.5rem, 3vw, 1.1rem);
+}
+.footerP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.538);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.829);
+  padding: 35px;
+  color: white;
+}
+
+.navlist {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  font-size: 1.5em;
+}
+a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+/* Disposition des containers */
+.container {
+  margin: 0 50vh;
+  padding: 5vh 0;
+}
+.concept p {
+  color: white;
+  font-size: 1.7em;
+}
+
+.containerHome {
+  height: 50vh;
+  margin: 0 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.voirLesRallyes {
+  margin-top: 50px;
+  align-self: flex-end;
+}
+
+.btnRallyes {
+  background-color: #f4c542;
+  border-radius: 10px;
+  border-color: 2px solid rgb(0, 0, 0);
+  padding: 5px;
+  transition: all 0.1s ease;
+}
+
+.btnRallyes:active {
+  transform: translateY(2px); /* Simule l'effet d'enfoncement */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Ajoute une ombre pour plus de réalisme */
+}

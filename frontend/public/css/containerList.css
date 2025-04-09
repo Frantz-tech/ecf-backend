@@ -1,0 +1,90 @@
+/* Conteneur de la liste des pilotes car compet */
+#piloteList,
+#carList,
+#competList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3vh;
+  margin-top: 5vh;
+}
+#carList {
+  gap: 50px;
+}
+
+/* Style pour chaque élément pilote car compet */
+.piloteItem,
+.competItem,
+.competItem {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.carItem {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Changement de style au survol de l'élément */
+.piloteItem:hover,
+.competItem:hover,
+.carItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Style pour les titres des informations */
+.piloteItem p,
+.carItem p,
+.competItem p {
+  font-size: 1.7em;
+  color: #333;
+  margin: 8px 0;
+}
+
+/* Style pour le nom du pilote & car */
+.piloteItem p:first-of-type,
+.competItem p:first-of-type,
+.carItem p:first-of-type {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+/* Style pour le prénom et l'âge */
+.piloteItem p:nth-of-type(2),
+.piloteItem p:nth-of-type(3),
+.competItem p:nth-of-type(3),
+.carItem p:nth-of-type(2),
+.carItem p:nth-of-type(3),
+.competItem p:nth-of-type(3) {
+  color: #555;
+}
+
+#containerList {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#containerList h1 {
+  color: #c19016;
+  align-self: center;
+  font-size: 3em;
+}
+
+/* Container pour les cars */
+.containerCar,
+.containerCompet {
+  padding: 5vh 0;
+}

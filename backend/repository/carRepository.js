@@ -33,7 +33,7 @@ const getCarById = async (id) => {
 
 const updateCar = async (id, carData) => {
   try {
-    const updatedCar = await Pilote.findByIdAndUpdate(id, { $set: carData }, { new: true, runValidators: true });
+    const updatedCar = await Vehicule.findByIdAndUpdate(id, { $set: carData }, { new: true, runValidators: true });
 
     if (!updatedCar) {
       throw new Error(`Véhicule avec l'ID ${id} non trouvé pour la mise à jour`);
