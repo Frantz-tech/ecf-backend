@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/form.css" />
+  <link rel="stylesheet" href="../css/containerList.css" />
+  <link rel="shortcut icon" href="/frontend/public/assets/favicon.jpg" type="image/x-icon" sizes="16x16" />
+  <title>ECF RallyScope Competitions</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="navlist">
+        <li id="home">
+          <a href="../pages/index.html">// Home</a>
+        </li>
+        <li id="pilote">
+          <a href="../pages/pilotes.html">// Pilotes</a>
+        </li>
+        <li id="vehicules">
+          <a href="../pages/car.html">// Vehicules</a>
+        </li>
+        <li id="competitions">
+          <a href="../pages/compet.html">// Compétitions</a>
+        </li>
+        <li id="circuits">
+          <a href="../pages/circuit.html">// Circuits</a>
+        </li>
+        <li id="sponsors">
+          <a href="../pages/sponsor.html">// Sponsors</a>
+        </li>
+        <!-- <li id="">
+            <a href="#">// [text]</a>
+          </li> -->
+      </ul>
+    </nav>
+  </header>
+  <main class="bgMainCompet">
+    <div class="containerCompet" id="containerList">
+      <div id="competList"></div>
+    </div>
+    <div class="container containerForm" id="containerF">
+      <form id="addCompetForm">
+        <input type="text" id="nom" placeholder="Nom du Rally" />
+        <input type="datetime-local" id="date_debut" placeholder="Date de début de la compétition" />
+        <input type="datetime-local" id="date_fin" placeholder="Date de fin de la compétition" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </main>
+  <footer>
+    <div class="footerP" id="footerP">
+      <p>
+        ©2025 ECF RallyScope Project, LLC. All Rights Reserved. RallyScope assets are used legally under license.
+      </p>
+    </div>
+  </footer>
+  <script src="../js/compet.js"></script>
+</body>
+
+</html>
