@@ -65,7 +65,7 @@ const deletePvc = async (id) => {
   }
 };
 
-export const PvcRepository = {
+export const Repository = {
   createPvc,
   getAllPvcs,
   getPvcById,
