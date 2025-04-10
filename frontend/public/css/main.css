@@ -3,7 +3,25 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #7e6854b2;
+}
+
+.bgMainCompet {
+  background: url(/frontend/public/assets/carBg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgMainCar {
+  background: url(/frontend/public/assets/rallySuede.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgMainPilote {
+  background: url(/frontend/public/assets/piloteBg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* Body */
 body {

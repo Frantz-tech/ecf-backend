@@ -13,9 +13,7 @@
 }
 
 /* Style pour chaque élément pilote car compet */
-.piloteItem,
-.competItem,
-.competItem {
+.piloteItem {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -36,6 +34,17 @@
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
+.competItem {
+  width: 900px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
 
 /* Changement de style au survol de l'élément */
 .piloteItem:hover,
@@ -47,11 +56,15 @@
 
 /* Style pour les titres des informations */
 .piloteItem p,
-.carItem p,
-.competItem p {
+.carItem p {
   font-size: 1.7em;
   color: #333;
   margin: 8px 0;
+}
+.competItem p {
+  color: #00ccff;
+  margin: 8px 0;
+  font-size: 1.7em;
 }
 
 /* Style pour le nom du pilote & car */
@@ -65,10 +78,8 @@
 /* Style pour le prénom et l'âge */
 .piloteItem p:nth-of-type(2),
 .piloteItem p:nth-of-type(3),
-.competItem p:nth-of-type(3),
 .carItem p:nth-of-type(2),
-.carItem p:nth-of-type(3),
-.competItem p:nth-of-type(3) {
+.carItem p:nth-of-type(3) {
   color: #555;
 }
 
@@ -87,4 +98,30 @@
 .containerCar,
 .containerCompet {
   padding: 5vh 0;
+}
+
+/* Bg des compétitions */
+#competList .competItem:nth-of-type(1) {
+  background: url(/frontend/public/assets/rallySuede.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+#competList .competItem:nth-of-type(2) {
+  background: url(/frontend/public/assets/rallyPortugl.png);
+  background-size: cover;
+  background-position: 0 -250px;
+  background-repeat: no-repeat;
+}
+#competList .competItem:nth-of-type(3) {
+  background: url(/frontend/public/assets/rallySardaigne.png);
+  background-size: cover;
+  background-position: 0 -200px;
+  background-repeat: no-repeat;
+}
+#competList .competItem:nth-of-type(4) {
+  background: url(/frontend/public/assets/rallyMonteCarlo.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
