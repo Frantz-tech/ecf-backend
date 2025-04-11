@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/reset.css" />
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/form.css" />
+  <link rel="stylesheet" href="../css/containerList.css" />
   <link rel="shortcut icon" href="/frontend/public/assets/favicon.jpg" type="image/x-icon" sizes="16x16" />
   <title>ECF RallyScope Circuits</title>
 </head>
@@ -28,7 +29,7 @@
           <a href="../pages/compet.html">// Compétitions</a>
         </li>
         <li id="circuits">
-          <a href="../pages/circuit.html">// Circuits</a>
+          <a href="../pages/participation.html">// Participations </a>
         </li>
         <li id="sponsors">
           <a href="../pages/sponsor.html">// Sponsors</a>
@@ -41,6 +42,33 @@
   </header>
   <main>
 
+    <div class="containerParticipation" id="containerList">
+
+    </div>
+
+    <form id="addPvcForm">
+      <h2>Associer un Pilote, un Véhicule et une Compétition</h2>
+
+      <!-- Liste des pilotes -->
+      <label for="pilote">Pilote:</label>
+      <select id="piloteOption" name="pilote" required>
+        <option value="">Sélectionner un pilote</option>
+      </select>
+
+      <!-- Liste des véhicules -->
+      <label for="vehicule">Véhicule:</label>
+      <select id="vehiculeOption" name="vehicule" required>
+        <option value="">Sélectionner un véhicule</option>
+      </select>
+
+      <!-- Liste des compétitions -->
+      <label for="competition">Compétition:</label>
+      <select id="competitionOption" name="competition" required>
+        <option value="">Sélectionner une compétition</option>
+      </select>
+
+      <button type="submit">Ajouter</button>
+    </form>
   </main>
   <footer>
     <div class="footerP" id="footerP">
@@ -49,7 +77,8 @@
       </p>
     </div>
   </footer>
-  <script src="../.js"></script>
+  <script src="../js/pvc.js"></script>
+
 </body>
 
 </html>

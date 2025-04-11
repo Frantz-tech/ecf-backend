@@ -24,7 +24,7 @@ const createPvc = async (data) => {
 
 const getAllPvcs = async () => {
   try {
-    const pvcs = await Repository.getAllPvcs();
+    const pvcs = await Repository.getAllPvcs(); // Pas de populate ici, c'est déjà fait dans le repository
 
     return pvcs;
   } catch (error) {

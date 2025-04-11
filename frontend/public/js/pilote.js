@@ -7,6 +7,8 @@ function fetchPilotes() {
 
       const piloteList = document.getElementById('piloteList');
       const pilotes = data.data;
+      piloteList.innerHTML = '';
+
       if (Array.isArray(pilotes) && pilotes.length > 0) {
         pilotes.forEach((pilote) => {
           const piloteItem = document.createElement('div');
@@ -45,6 +47,7 @@ form.addEventListener('submit', (e) => {
     .then((response) => response.json())
     .then((pilote) => {
       console.log('Pilote ajouté:', pilote);
+      alert('Pilote ajouté avec succès!');
       fetchPilotes(); // Recharge la liste des pilotes après l'ajout
     });
 });

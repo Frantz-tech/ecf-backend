@@ -34,9 +34,10 @@
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-.competItem {
+.competItem,
+.participationItem {
   width: 900px;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9db;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -49,28 +50,27 @@
 /* Changement de style au survol de l'élément */
 .piloteItem:hover,
 .competItem:hover,
-.carItem:hover {
+.carItem:hover,
+.participationItem {
   transform: translateY(-5px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Style pour les titres des informations */
 .piloteItem p,
-.carItem p {
+.carItem p,
+.competItem p,
+.participationItem p {
   font-size: 1.7em;
   color: #333;
   margin: 8px 0;
-}
-.competItem p {
-  color: #00ccff;
-  margin: 8px 0;
-  font-size: 1.7em;
 }
 
 /* Style pour le nom du pilote & car */
 .piloteItem p:first-of-type,
 .competItem p:first-of-type,
-.carItem p:first-of-type {
+.carItem p:first-of-type,
+.participationItem p:first-of-type {
   font-weight: bold;
   font-size: 2em;
 }
@@ -78,6 +78,8 @@
 /* Style pour le prénom et l'âge */
 .piloteItem p:nth-of-type(2),
 .piloteItem p:nth-of-type(3),
+.competItem p:nth-of-type(2),
+.competItem p:nth-of-type(3),
 .carItem p:nth-of-type(2),
 .carItem p:nth-of-type(3) {
   color: #555;
@@ -96,32 +98,9 @@
 
 /* Container pour les cars */
 .containerCar,
-.containerCompet {
+.containerCompet,
+.containerParticipation {
   padding: 5vh 0;
 }
 
 /* Bg des compétitions */
-#competList .competItem:nth-of-type(1) {
-  background: url(/frontend/public/assets/rallySuede.png);
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-#competList .competItem:nth-of-type(2) {
-  background: url(/frontend/public/assets/rallyPortugl.png);
-  background-size: cover;
-  background-position: 0 -250px;
-  background-repeat: no-repeat;
-}
-#competList .competItem:nth-of-type(3) {
-  background: url(/frontend/public/assets/rallySardaigne.png);
-  background-size: cover;
-  background-position: 0 -200px;
-  background-repeat: no-repeat;
-}
-#competList .competItem:nth-of-type(4) {
-  background: url(/frontend/public/assets/rallyMonteCarlo.png);
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
