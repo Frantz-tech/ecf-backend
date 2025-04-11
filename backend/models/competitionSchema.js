@@ -6,6 +6,6 @@ const CompetitionSchema = new mongoose.Schema({
   date_fin: { type: Date, required: true },
 });
 
-const Competition = mongoose.model('Competititon', CompetitionSchema);
+const Competition = mongoose.model('Competition', CompetitionSchema, 'competititons');
 
 export default Competition;

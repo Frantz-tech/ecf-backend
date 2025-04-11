@@ -1,8 +1,19 @@
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Mois avec 2 chiffres
+  const day = String(date.getDate()).padStart(2, '0'); // Jour avec 2 chiffres
+  const hours = String(date.getHours()).padStart(2, '0'); // Heure avec 2 chiffres
+  const minutes = String(date.getMinutes()).padStart(2, '0'); // Minutes avec 2 chiffres
+
+  return `${year}-${month}-${day} ${hours}:${minutes}`;
+}
+
 function fetchCompets() {
   fetch('http://localhost:3000/api/competition')
     .then((response) => response.json())
     .then((data) => {
-      console.log('Compétitions récupérés:', data); // Vérifie les données reçues
+      console.log('Compétitions récupérées:', data); // Vérifie les données reçues
 
       const competList = document.getElementById('competList');
       const compets = data.data;
@@ -10,7 +21,13 @@ function fetchCompets() {
       if (Array.isArray(compets) && compets.length > 0) {
         compets.forEach((compet) => {
           const competItem = document.createElement('div');
-          competItem.innerHTML = `<p>Nom de la compétition : ${compet.nom}</p> <p>Date de début : ${compet.date_debut}</p> <p> Date de fin :${compet.date_fin}</p> `;
+          // Applique formatDate pour les dates
+          const formattedDateDebut = formatDate(compet.date_debut);
+          const formattedDateFin = formatDate(compet.date_fin);
+
+          competItem.innerHTML = `<p>Nom de la compétition : ${compet.nom}</p>
+                                  <p>Date de début : ${formattedDateDebut}</p>
+                                  <p>Date de fin : ${formattedDateFin}</p>`;
           competList.appendChild(competItem);
           competItem.classList.add('competItem');
         });
@@ -45,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
       .then((response) => response.json())
       .then((compet) => {
-        console.log('Compétition ajouté:', compet);
+        console.log('Compétition ajoutée:', compet);
         fetchCompets(); // Recharge la liste des compétitions après l'ajout
       });
   });

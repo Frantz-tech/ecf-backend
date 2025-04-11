@@ -10,7 +10,8 @@ async function fetchPilotes() {
         pilotes.forEach((pilote) => {
           const option = document.createElement('option');
           option.value = pilote._id; // Utilise l'ID du pilote
-          option.textContent = `${pilote.nom} ${pilote.prenom}`; // Affiche le nom du pilote
+          option.textContent = pilote.nom; // Affiche le nom du pilote
+          option.textContent = pilote.prenom; // Affiche le prenom du pilote
 
           piloteSelect.appendChild(option);
         });
@@ -85,58 +86,42 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchCompetitions();
   fetchParticipations(); // nouvelle ligne
 });
-
 function handleSubmit(event) {
   event.preventDefault();
 
-  // Récupérer l'ID de la sélection
+  // Récupérer les ID des sélections
+  const piloteId = document.getElementById('piloteOption').value;
+  const vehiculeId = document.getElementById('vehiculeOption').value;
+  const competitionId = document.getElementById('competitionOption').value;
 
-  // const piloteId = document.getElementById('piloteOption').value;
-  // const vehiculeId = document.getElementById('vehiculeOption').value;
-  // const competitionId = document.getElementById('competitionOption').value;
-
-  // // Afficher les valeurs pour voir ce qui est récupéré
-  // console.log('Pilote ID:', piloteId);
-  // console.log('Véhicule ID:', vehiculeId);
-  // console.log('Compétition ID:', competitionId);
-
-  // Récupérer le nom de la sélection (utiliser textContent)
-  const piloteName =
-    document.getElementById('piloteOption').options[document.getElementById('piloteOption').selectedIndex].textContent;
-  const vehiculeName =
-    document.getElementById('vehiculeOption').options[document.getElementById('vehiculeOption').selectedIndex]
-      .textContent;
-  const competitionName =
-    document.getElementById('competitionOption').options[document.getElementById('competitionOption').selectedIndex]
-      .textContent;
-
-  // Afficher les valeurs pour voir ce qui est récupéré
-  console.log('Pilote Name:', piloteName);
-  console.log('Véhicule Name:', vehiculeName);
-  console.log('Compétition Name:', competitionName);
-
-  if (!piloteName || !vehiculeName || !competitionName) {
+  // Vérifier que tous les champs sont remplis
+  if (!piloteId || !vehiculeId || !competitionId) {
     alert('Tous les champs sont requis');
     return;
   }
 
+  // S'assurer que les IDs sont bien récupérés et envoyés
+  console.log('Pilote ID:', piloteId);
+  console.log('Véhicule ID:', vehiculeId);
+  console.log('Compétition ID:', competitionId);
+
+  // Envoyer les IDs et non pas les noms ou autres objets
   fetch('http://localhost:3000/api/pvc', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      pilote: piloteName,
-      vehicule: vehiculeName,
-      competition: competitionName,
+      pilote: piloteId, // Envoyer uniquement l'ID
+      vehicule: vehiculeId, // Envoyer uniquement l'ID
+      competition: competitionId, // Envoyer uniquement l'ID
     }),
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log('data response : ', data);
-      const response = data.data;
+      console.log('Data response:', data);
       if (data.error) {
-        console.log("Détails de l'erreur :", data.error); // Ajout du log pour obtenir plus de détails
+        console.log("Détails de l'erreur :", data.error); // Ajouter un log pour obtenir plus de détails
         alert('Erreur: ' + data.error);
       } else {
         alert('Pilote, Véhicule et Compétition liés avec succès!');
@@ -148,7 +133,6 @@ function handleSubmit(event) {
       alert('Erreur lors de la liaison : ' + error.message);
     });
 }
-
 document.getElementById('addPvcForm').addEventListener('submit', handleSubmit);
 
 const listTitle = document.createElement('h1');
