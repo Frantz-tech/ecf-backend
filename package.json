@@ -7,8 +7,8 @@
   "scripts": {
     "test": "vitest",
     "prepare": "husky install",
-    "dev:api": "node --watch app.js",
-    "start": "node app.js",
+    "dev:api": "node --watch backend/app.js",
+    "start": "node backend/app.js",
     "prettier": "prettier . --write",
     "commit": "git-cz",
     "lint-staged": "lint-staged"
@@ -25,7 +25,11 @@
   },
   "homepage": "https://github.com/Frantz-tech/ecf-backend#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
@@ -37,7 +41,9 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "supertest": "^7.1.0",
+    "vitest": "^3.1.1"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [

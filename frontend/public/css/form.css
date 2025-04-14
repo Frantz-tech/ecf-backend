@@ -1,0 +1,113 @@
+/* Style global du formulaire */
+#addPiloteForm,
+#addCarForm,
+#addCompetForm,
+#addPvcForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Champs de saisie */
+#addPiloteForm input[type='text'],
+#addCompetForm input[type='text'],
+#addCompetForm input[type='datetime-local'],
+#addCarForm input[type='text'],
+#addCarForm input[type='url'],
+#addPiloteForm input[type='number'],
+#addPvcForm select,
+#addPvcForm button {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Focus sur les champs de saisie */
+#addPiloteForm input[type='text']:focus,
+#addCompetForm input[type='text']:focus,
+#addCompetForm input[type='datetime-local']:focus,
+#addCarForm input[type='text']:focus,
+#addCarForm input[type='url']:focus,
+#addPiloteForm input[type='number']:focus,
+#addPvcForm select:focus,
+#addPvcForm button:focus {
+  border-color: #84630d;
+  outline: none;
+}
+
+/* Boutons */
+#addPiloteForm button,
+#addCompetForm button,
+#addCarForm button,
+#addPvcForm button {
+  padding: 10px;
+  background-color: #84630d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#addPiloteForm button:hover,
+#addCompetForm button:hover,
+#addCarForm button:hover,
+#addPvcForm button:hover {
+  background-color: #c19016;
+}
+
+/* Messages d'erreur */
+#addPiloteForm .error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Espacement et alignement des éléments */
+#addPiloteForm .form-group,
+#addCompetForm .form-group,
+#addCarForm .form-group,
+#addPvcForm .form-group {
+  margin-bottom: 20px;
+}
+
+#addPiloteForm .form-group:last-child,
+#addCompetForm .form-group:last-child,
+#addCarForm .form-group:last-child,
+#addPvcForm .form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Titre du formulaire */
+#addPvcForm h2 {
+  color: #c19016;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.containerForm {
+  /* display: none; */
+}
+
+#containerF {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#containerF h2 {
+  color: #c19016;
+  align-self: center;
+  font-size: 3em;
+}
